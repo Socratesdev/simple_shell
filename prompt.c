@@ -18,7 +18,17 @@ int main()
 	
 	printf(input);
 	
+	
+	
+	char *words;
+	const char *s = " ";
+	words = strtok(input, s);
 
+	while (words != NULL) {
+		printf("%s\n", words);
+		words = strtok(NULL, s);
+	}
+	
 	free(input);
 	/*the data in args[0] is the data given in the getline */
 
